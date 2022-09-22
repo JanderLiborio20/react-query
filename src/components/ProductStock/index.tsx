@@ -12,7 +12,8 @@ type ProductStockProps = {
 
 async function updateProduct(product: IProduct) {
   const request = await axios.put(
-    `http://localhost:3333/products/${product.id}`
+    `http://localhost:3333/products/${product.id}`,
+    product
   );
 
   return request.data;
